@@ -14,7 +14,7 @@
     "deploy": "ts-node ./src/scripts/deploy.ts"
   },
   "dependencies": {
-    "@inquirer/prompts": "^3.0.1",
+    "@inquirer/prompts": "^3.3.2",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^18.7.21",
     "@types/uuid": "^8.3.4",
