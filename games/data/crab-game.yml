@@ -1,0 +1,102 @@
+uuid: "4b436497-2041-42ac-88b4-29206515b48d"
+label: "crab-game"
+meta:
+  displayName: "Crab Game"
+  iconUrl: "crab-game/crab-game-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "1782210"
+    steamFolderName: "Crab Game"
+    dataFolderName: "Crab Game_Data"
+    exeNames:
+      - "Crab Game.exe"
+      - "Crab Game.x86_64"
+    packageLoader: "bepinex"
+    meta:
+      displayName: "Crab Game"
+      iconUrl: "crab-game/crab-game-cover-360x480.webp"
+    settingsIdentifier: "CrabGame"
+    internalFolderName: "CrabGame"
+    packageIndex: "https://thunderstore.io/c/crab-game/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "螃蟹游戏"
+    installRules:
+      - route: "BepInEx/plugins"
+        isDefaultLocation: true
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/core"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/patchers"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/monomod"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/config"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Crab Game"
+  listed: true
+  meta:
+    icon: "crab-game/crab-game-icon-192x192.webp"
+    cover: "crab-game/crab-game-cover-360x480.webp"
+    background: "crab-game/crab-game-bg-1920x1080.webp"
+    hero: "crab-game/crab-game-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    host-only:
+      label: "Host Only"
+    client-side:
+      label: "Client Side"
+    all-clients:
+      label: "All Clients"
+    asset-replacements:
+      label: "Asset Replacements"
+    tweaks-and-quality-of-life:
+      label: "Tweaks & Quality Of Life"
+    bug-fixes:
+      label: "Bug Fixes"
+    commands:
+      label: "Commands"
+    game-modes:
+      label: "Game Modes"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+    tools:
+      label: "Tools"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/jBGMZqndT3"

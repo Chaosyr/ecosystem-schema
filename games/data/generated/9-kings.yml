@@ -1,0 +1,56 @@
+uuid: "3f1b9fa4-a067-4910-877e-78bcd8caef25"
+label: "9-kings"
+meta:
+  displayName: "9 Kings"
+  iconUrl: "9-kings/9-kings-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "2784470"
+r2modman:
+  - meta:
+      displayName: "9 Kings"
+      iconUrl: "9-kings/9-kings-cover-360x480.webp"
+    internalFolderName: "9Kings"
+    dataFolderName: "9Kings_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "2784470"
+    settingsIdentifier: "9Kings"
+    packageIndex: "https://thunderstore.io/c/9-kings/api/v1/package-listing-index/"
+    steamFolderName: "9 Kings"
+    exeNames:
+      - "9Kings.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "九王"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null

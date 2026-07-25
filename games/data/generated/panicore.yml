@@ -1,0 +1,50 @@
+uuid: "4a28a8cc-902c-4630-a4b7-79f90ae22299"
+label: "panicore"
+meta:
+  displayName: "Panicore"
+  iconUrl: "panicore/panicore-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "2695940"
+r2modman:
+  - meta:
+      displayName: "Panicore"
+      iconUrl: "panicore/panicore-cover-360x480.webp"
+    internalFolderName: "Panicore"
+    dataFolderName: "Panicore"
+    distributions:
+      - platform: "steam"
+        identifier: "2695940"
+    settingsIdentifier: "Panicore"
+    packageIndex: "https://thunderstore.io/c/panicore/api/v1/package-listing-index/"
+    steamFolderName: "Panicore"
+    exeNames:
+      - "Panicore.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "panicore"
+      - "恐慌核心"
+    packageLoader: "shimloader"
+    installRules:
+      - route: "shimloader/mod"
+        isDefaultLocation: true
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/pak"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/cfg"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+      - route: "shimloader/overlay"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+    relativeFileExclusions: null

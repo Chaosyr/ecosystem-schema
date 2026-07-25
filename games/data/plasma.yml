@@ -1,0 +1,43 @@
+uuid: "18cea92d-ed64-4107-8f49-79b55ad6cb39"
+label: "plasma"
+meta:
+  displayName: "Plasma"
+  iconUrl: "plasma/plasma-cover-360x480.webp"
+distributions: []
+thunderstore:
+  displayName: "Plasma"
+  listed: true
+  meta:
+    icon: "plasma/plasma-icon-192x192.webp"
+    cover: "plasma/plasma-cover-360x480.webp"
+    background: "plasma/plasma-bg-1920x1080.webp"
+    hero: "plasma/plasma-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+    biomes:
+      label: "Biomes"
+    nodes:
+      label: "Logic Nodes"
+    components:
+      label: "Components"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/BqGuhjtb65"

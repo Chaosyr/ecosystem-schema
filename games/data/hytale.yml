@@ -1,0 +1,135 @@
+uuid: "a656c998-825b-4ab6-a733-e0ed025994f7"
+label: "hytale"
+meta:
+  displayName: "Hytale"
+  iconUrl: "hytale/hytale-cover-360x480.webp"
+distributions: []
+r2modman: null
+thunderstore:
+  displayName: "Hytale"
+  listed: true
+  meta:
+    icon: "hytale/hytale-icon-192x192.webp"
+    cover: "hytale/hytale-cover-360x480.webp"
+    background: "hytale/hytale-bg-1920x1080.webp"
+    hero: "hytale/hytale-bg-1920x620.webp"
+  categories:
+    pre-release:
+      label: "Pre-Release"
+    release:
+      label: "Release"
+    worlds:
+      label: "Worlds"
+    universes:
+      label: "Universes"
+    saves:
+      label: "Saves"
+    plugins:
+      label: "Plugins"
+    asset-packs:
+      label: "Asset Packs"
+    early-plugins:
+      label: "Early Plugins"
+    mods:
+      label: "Mods"
+    tools:
+      label: "Tools"
+    audio:
+      label: "Audio"
+    libraries:
+      label: "Libraries"
+    modpacks:
+      label: "Combos"
+    misc:
+      label: "Misc"
+    ai-generated:
+      label: "AI Generated"
+  sections:
+    mods:
+      name: "Mods"
+      requireCategories:
+        - "mods"
+        - "plugins"
+        - "early-plugins"
+        - "asset-packs"
+      excludeCategories:
+        - "modpacks"
+        - "worlds"
+        - "universes"
+        - "saves"
+    plugins:
+      name: "Plugins"
+      requireCategories:
+        - "plugins"
+        - "early-plugins"
+      excludeCategories:
+        - "modpacks"
+        - "worlds"
+        - "universes"
+        - "saves"
+        - "asset-packs"
+    asset-packs:
+      name: "Asset Packs"
+      requireCategories:
+        - "asset-packs"
+      excludeCategories:
+        - "modpacks"
+        - "worlds"
+        - "universes"
+        - "saves"
+        - "plugins"
+        - "early-plugins"
+    saves:
+      name: "Saves"
+      requireCategories:
+        - "saves"
+      excludeCategories:
+        - "modpacks"
+        - "worlds"
+        - "universes"
+        - "mods"
+        - "plugins"
+        - "asset-packs"
+        - "early-plugins"
+    universes:
+      name: "Universes"
+      requireCategories:
+        - "universes"
+      excludeCategories:
+        - "modpacks"
+        - "worlds"
+        - "saves"
+        - "mods"
+        - "plugins"
+        - "asset-packs"
+        - "early-plugins"
+    worlds:
+      name: "Worlds"
+      requireCategories:
+        - "worlds"
+      excludeCategories:
+        - "modpacks"
+        - "universes"
+        - "saves"
+        - "mods"
+        - "plugins"
+        - "asset-packs"
+        - "early-plugins"
+    other:
+      name: "Other"
+      excludeCategories:
+        - "mods"
+        - "plugins"
+        - "asset-packs"
+        - "modpacks"
+        - "worlds"
+        - "universes"
+        - "saves"
+        - "early-plugins"
+    modpacks:
+      name: "Combos"
+      requireCategories:
+        - "modpacks"
+  wikiUrl: "https://hytalemodding.dev/"
+  discordUrl: "https://discord.gg/hytalemodding"
+  autolistPackageIds: []

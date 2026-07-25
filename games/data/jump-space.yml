@@ -1,0 +1,61 @@
+uuid: "0749aeb4-0675-405a-b247-c4180035066b"
+label: "jump-space"
+meta:
+  displayName: "Jump Space"
+  iconUrl: "jump-space/jump-space-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "1757300"
+    steamFolderName: "JumpSpace"
+    dataFolderName: "Jump Space_Data"
+    exeNames:
+      - "Jump Space.exe"
+    packageLoader: "recursive-melonloader"
+    meta:
+      displayName: "Jump Space"
+      iconUrl: "jump-space/jump-space-cover-360x480.webp"
+    settingsIdentifier: "JumpSpace"
+    internalFolderName: "JumpSpace"
+    packageIndex: "https://thunderstore.io/c/jump-space/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "跃迁空间"
+    installRules: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Jump Space"
+  listed: true
+  meta:
+    icon: "jump-space/jump-space-icon-192x192.webp"
+    cover: "jump-space/jump-space-cover-360x480.webp"
+    background: "jump-space/jump-space-bg-1920x1080.webp"
+    hero: "jump-space/jump-space-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/JPnBe9ujTN"
+  autolistPackageIds:
+    - "LavaGang-MelonLoader"
+  shortDescription: "Jump Space (formerly Jump Ship) is a mission based co-op PvE for 1-4 players, where you are the crew of a spaceship."

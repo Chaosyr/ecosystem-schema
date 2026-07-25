@@ -1,0 +1,88 @@
+uuid: "861f9f61-8f2d-4d32-bf15-c2fdd1b5e0f5"
+label: "megabonk"
+meta:
+  displayName: "Megabonk"
+  iconUrl: "megabonk/megabonk-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "3405340"
+    steamFolderName: "Megabonk"
+    dataFolderName: "Megabonk_Data"
+    exeNames:
+      - "Megabonk.exe"
+      - "Megabonk.x86_64"
+    packageLoader: "bepinex"
+    meta:
+      displayName: "Megabonk"
+      iconUrl: "megabonk/megabonk-cover-360x480.webp"
+    settingsIdentifier: "Megabonk"
+    internalFolderName: "Megabonk"
+    packageIndex: "https://thunderstore.io/c/megabonk/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "梅加邦克"
+    installRules:
+      - route: "BepInEx/plugins"
+        isDefaultLocation: true
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/core"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/patchers"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/monomod"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/config"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Megabonk"
+  listed: true
+  meta:
+    icon: "megabonk/megabonk-icon-192x192.webp"
+    cover: "megabonk/megabonk-cover-360x480.webp"
+    background: "megabonk/megabonk-bg-1920x1080.webp"
+    hero: "megabonk/megabonk-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/9VCRuEYTcq"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack_IL2CPP"

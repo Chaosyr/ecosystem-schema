@@ -1,0 +1,81 @@
+uuid: "bb2d482f-548d-4e6c-8421-0824a81f172c"
+label: "peak"
+meta:
+  displayName: "PEAK"
+  iconUrl: "peak/peak-cover-360x480.webp"
+distributions: []
+thunderstore:
+  displayName: "PEAK"
+  listed: true
+  meta:
+    icon: "peak/peak-icon-192x192.webp"
+    cover: "peak/peak-cover-360x480.webp"
+    background: "peak/peak-bg-1920x1080.webp"
+    hero: "peak/peak-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+    world:
+      label: "World"
+    items:
+      label: "Items"
+    qol:
+      label: "Quality Of Life"
+    client:
+      label: "Client Side"
+    host:
+      label: "Host Only"
+    all:
+      label: "All Clients"
+    translation:
+      label: "Translations"
+    optimization:
+      label: "Optimization"
+    cosmetics:
+      label: "Cosmetics"
+    faces:
+      label: "Faces"
+    afflictions:
+      label: "Afflictions"
+    accolades:
+      label: "Accolades"
+    asset-replacements:
+      label: "Asset Replacements"
+    mixtapes:
+      label: "Mixtapes"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+        - "asset-replacements"
+        - "mixtapes"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+    asset-replacements:
+      name: "Asset Replacements"
+      requireCategories:
+        - "asset-replacements"
+      excludeCategories:
+        - "modpacks"
+        - "mixtapes"
+    resource-packs:
+      name: "Resource Packs"
+      requireCategories:
+        - "mixtapes"
+      excludeCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/SAw86z24rB"
+  wikiUrl: "https://peakmodding.github.io"

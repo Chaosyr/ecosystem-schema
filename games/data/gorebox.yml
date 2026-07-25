@@ -1,0 +1,40 @@
+uuid: "c49c7c87-81de-4877-aeb5-1793a88997e6"
+label: "gorebox"
+meta:
+  displayName: "GoreBox"
+  iconUrl: "gorebox/gorebox-cover-360x480.webp"
+distributions: []
+thunderstore:
+  displayName: "GoreBox"
+  listed: true
+  meta:
+    icon: "gorebox/gorebox-icon-192x192.webp"
+    cover: "gorebox/gorebox-cover-360x480.webp"
+    background: "gorebox/gorebox-bg-1920x1080.webp"
+    hero: "gorebox/gorebox-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  wikiUrl: "https://gorebox.fandom.com/wiki/GoreBox_Wiki"
+  discordUrl: "https://discord.com/invite/f2games"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack_IL2CPP"

@@ -1,0 +1,60 @@
+uuid: "aeebfea4-fe72-4535-9cea-0b880b5d270c"
+label: "mimesis"
+meta:
+  displayName: "Mimesis"
+  iconUrl: "mimesis/mimesis-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "2827200"
+    steamFolderName: "MIMESIS"
+    dataFolderName: "MIMESIS_Data"
+    exeNames:
+      - "MIMESIS.exe"
+    packageLoader: "recursive-melonloader"
+    meta:
+      displayName: "Mimesis"
+      iconUrl: "mimesis/mimesis-cover-360x480.webp"
+    settingsIdentifier: "Mimesis"
+    internalFolderName: "Mimesis"
+    packageIndex: "https://thunderstore.io/c/mimesis/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "迷魅狩猎"
+    installRules: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Mimesis"
+  listed: true
+  meta:
+    icon: "mimesis/mimesis-icon-192x192.webp"
+    cover: "mimesis/mimesis-cover-360x480.webp"
+    background: "mimesis/mimesis-bg-1920x1080.webp"
+    hero: "mimesis/mimesis-bg-1920x620.webp"
+  discordUrl: "https://discord.gg/FjPTPRMRn"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  autolistPackageIds:
+    - "LavaGang-MelonLoader"

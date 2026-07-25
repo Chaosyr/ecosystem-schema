@@ -1,0 +1,50 @@
+uuid: "60b24eb2-791f-43bf-91da-f19139f6738f"
+label: "palworld"
+meta:
+  displayName: "Palworld"
+  iconUrl: "palworld/palworld-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "1623730"
+r2modman:
+  - meta:
+      displayName: "Palworld"
+      iconUrl: "palworld/palworld-cover-360x480.webp"
+    internalFolderName: "Palworld"
+    dataFolderName: "Pal"
+    distributions:
+      - platform: "steam"
+        identifier: "1623730"
+    settingsIdentifier: "Palworld"
+    packageIndex: "https://thunderstore.io/c/palworld/api/v1/package-listing-index/"
+    steamFolderName: "Palworld"
+    exeNames:
+      - "Palworld.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "palworld"
+      - "幻兽帕鲁"
+    packageLoader: "shimloader"
+    installRules:
+      - route: "shimloader/mod"
+        isDefaultLocation: true
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/pak"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/cfg"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+      - route: "shimloader/overlay"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+    relativeFileExclusions: null

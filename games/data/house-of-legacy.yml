@@ -1,0 +1,88 @@
+uuid: "3e5e018e-6d47-45cd-80eb-31317287ddb4"
+label: "house-of-legacy"
+meta:
+  displayName: "House of Legacy"
+  iconUrl: "house-of-legacy/house-of-legacy-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "2503770"
+    steamFolderName: "吾今有世家"
+    dataFolderName: "House of Legacy_Data"
+    exeNames:
+      - "House of Legacy.exe"
+    packageLoader: "bepinex"
+    meta:
+      displayName: "House of Legacy"
+      iconUrl: "house-of-legacy/house-of-legacy-cover-360x480.webp"
+    settingsIdentifier: "HouseOfLegacy"
+    internalFolderName: "HouseOfLegacy"
+    packageIndex: "https://thunderstore.io/c/house-of-legacy/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings: 
+      - "hol"
+      - "吾今有世家"
+    installRules:
+      - route: "BepInEx/plugins"
+        isDefaultLocation: true
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/core"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/patchers"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/monomod"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/config"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "House of Legacy"
+  listed: true
+  meta:
+    icon: "house-of-legacy/house-of-legacy-icon-192x192.webp"
+    cover: "house-of-legacy/house-of-legacy-cover-360x480.webp"
+    background: "house-of-legacy/house-of-legacy-bg-1920x1080.webp"
+    hero: "house-of-legacy/house-of-legacy-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/5ubSTurmBe"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack"

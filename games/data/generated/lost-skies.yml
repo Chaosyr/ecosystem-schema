@@ -1,0 +1,57 @@
+uuid: "0814ff73-fa5d-4d32-9248-57259fd43f9d"
+label: "lost-skies"
+meta:
+  displayName: "Lost Skies"
+  iconUrl: "lost-skies/lost-skies-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "1931180"
+r2modman:
+  - meta:
+      displayName: "Lost Skies"
+      iconUrl: "lost-skies/lost-skies-cover-360x480.webp"
+    internalFolderName: "LostSkies"
+    dataFolderName: "LostSkies_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "1931180"
+    settingsIdentifier: "LostSkies"
+    packageIndex: "https://thunderstore.io/c/lost-skies/api/v1/package-listing-index/"
+    steamFolderName: "Wild Skies"
+    exeNames:
+      - "LostSkies.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "ls"
+      - "失落的天空"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null

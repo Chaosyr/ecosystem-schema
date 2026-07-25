@@ -1,0 +1,58 @@
+uuid: "6b4a870a-26fe-44c2-9164-9e3fc5d86e3a"
+label: "return-of-the-obra-dinn"
+meta:
+  displayName: "Return of the Obra Dinn"
+  iconUrl: "return-of-the-obra-dinn/return-of-the-obra-dinn-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "653530"
+r2modman:
+  - meta:
+      displayName: "Return of the Obra Dinn"
+      iconUrl: "return-of-the-obra-dinn/return-of-the-obra-dinn-cover-360x480.webp"
+    internalFolderName: "ObraDinn"
+    dataFolderName: "ObraDinn_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "653530"
+    settingsIdentifier: "ObraDinn"
+    packageIndex: "https://thunderstore.io/c/return-of-the-obra-dinn/api/v1/package-listing-index/"
+    steamFolderName: "ObraDinn"
+    exeNames:
+      - "ObraDinn.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "rotod"
+      - "奥伯拉丁的回归"
+      - "奥伯拉丁的归来"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null

@@ -5,23 +5,30 @@ ecosystem.
 
 ## Usage
 
-### Extract r2modman definitions
+### Generate a new game definition YAML
 
 ```
-yarn run extract
+yarn run add
 ```
 
-### Build game definitions into json
+### Build game definitions into JSON
 
 ```
 yarn run build
 ```
 
-### Generate a new game definition yml
+JSON file containing all the data, as well as JSON Schema file defining
+the structure of the data will be placed in `dist/` folder.
+
+### Serve the schema and assets locally
 
 ```
-yarn run add {gamename}
+yarn run serve
 ```
+
+Builds the schema, then serves the schema and asset files on
+`http://localhost:1337`. The port can be overridden via the `PORT`
+environment variable.
 
 ### Deploy the latest generated schema
 
@@ -32,6 +39,8 @@ be set. See [Configuring](#configuring) for more details.
 yarn run deploy
 ```
 
+Note that the CI pipeline will do this automatically when changes are merged.
+
 ## Configuring
 
 Configuration can be provided as environment variables or by adding a `.env`
@@ -39,10 +48,11 @@ file at the root of the project (next to `package.json`).
 
 Available configuration options are as follows:
 
-| Name             | Default Value | Description                              |
-|------------------|---------------|------------------------------------------|
-| `DEPLOY_API_URL` |               | API url where the built schema is posted |
-| `DEPLOY_API_KEY` |               | API key used with `DEPLOY_API_URL`       |
+| Name                | Default Value | Description                                                                     |
+|---------------------|---------------|---------------------------------------------------------------------------------|
+| `DEPLOY_API_URL`    |               | API url where the built schema is posted                                        |
+| `DEPLOY_API_KEY`    |               | API key used with `DEPLOY_API_URL`                                              |
+| `LATEST_SCHEMA_URL` |               | API url where the latest schema is located at (to diff against when validating) |
 
 ## Goals
 

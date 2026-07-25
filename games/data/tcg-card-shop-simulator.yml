@@ -1,0 +1,103 @@
+uuid: "99207aff-e108-4371-ac34-75f57763729f"
+label: "tcg-card-shop-simulator"
+meta:
+  displayName: "TCG Card Shop Simulator"
+  iconUrl: "tcg-card-shop-simulator/tcg-card-shop-simulator-cover-360x480.webp"
+distributions: []
+thunderstore:
+  displayName: "TCG Card Shop Simulator"
+  listed: true
+  meta:
+    icon: "tcg-card-shop-simulator/tcg-card-shop-simulator-icon-192x192.webp"
+    cover: "tcg-card-shop-simulator/tcg-card-shop-simulator-cover-360x480.webp"
+    background: "tcg-card-shop-simulator/tcg-card-shop-simulator-bg-1920x1080.webp"
+    hero: "tcg-card-shop-simulator/tcg-card-shop-simulator-bg-1920x620.webp"
+  categories:
+        mods:
+          label: "Mods"
+        modpacks:
+          label: "Modpacks"
+        apps:
+          label: "Apps"
+        asset-replacement:
+          label: "Asset Replacement"
+        audio:
+          label: "Audio"
+        cards:
+          label: "Cards"
+        decoration:
+          label: "Decoration"
+        expansions:
+          label: "Expansions"
+        furniture:
+          label: "Furniture"
+        items:
+          label: "Items"
+        npcs:
+          label: "NPCs"
+        phone-related:
+          label: "Phone Related"
+        qol:
+          label: "QOL"
+        sellables:
+          label: "Sellables"
+        sets:
+          label: "Sets"
+        shop:
+          label: "Shop"
+        themes:
+          label: "Themes"
+        tools:
+          label: "Tools"
+        cheats:
+          label: "Cheats"
+        misc:
+          label: "Misc"
+        0-62-branch:
+          label: "0.62 Branch"
+        0-66-branch:
+          label: "0.66 Branch"
+        manual-dependencies:
+          label: "Requires Manual Dependencies"
+        ai-generated:
+          label: "AI Generated"
+  sections:
+    main:
+      name: "Main Branch"
+      excludeCategories:
+        - "modpacks"
+        - "0-62-branch"
+        - "0-66-branch"
+    main-modpacks:
+      name: "Main Branch Modpacks"
+      requireCategories:
+        - "modpacks"
+      excludeCategories:
+        - "0-62-branch"
+        - "0-66-branch"
+    0-62:
+      name: "0.62 Branch"
+      requireCategories:
+        - "0-62-branch"
+      excludeCategories:
+        - "modpacks"
+    0-62-modpacks:
+      name: "0.62 Branch Modpacks"
+      requireCategories:
+        - "modpacks"
+        - "0-62-branch"
+    0-66:
+      name: "0.66 Branch"
+      requireCategories:
+        - "0-66-branch"
+      excludeCategories:
+        - "modpacks"
+    0-66-modpacks:
+      name: "0.66 Branch Modpacks"
+      requireCategories:
+        - "modpacks"
+        - "0-66-branch"
+  wikiUrl: "https://tcg-card-shop-simulator.notion.site/3f8c9de6b54c47a9b80329b40bdd3c2c?v=04938d1088de49e5a55734d498f081ef"
+  discordUrl: "https://discord.gg/kCp4mRAVUE"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack"

@@ -2,10 +2,14 @@ uuid: "e7eaf05a-ba88-447b-bdd8-4c5d53ccfa11"
 label: "voices-of-the-void"
 meta:
   displayName: "Voices of the Void"
-  iconUrl: "None"
+  iconUrl: "voices-of-the-void/voices-of-the-void-cover-360x480.webp"
 distributions: []
 thunderstore:
   displayName: "Voices of the Void"
+  listed: true
+  meta:
+    icon: "voices-of-the-void/voices-of-the-void-icon-192x192.webp"
+    cover: "voices-of-the-void/voices-of-the-void-cover-360x480.webp"
   categories:
     mods:
       label: "Mods"
@@ -19,6 +23,24 @@ thunderstore:
       label: "Misc"
     audio:
       label: "Audio"
+    items:
+      label: "Items"
+    language:
+      label: "Language"
+    tweaks:
+      label: "Tweaks"
+    console:
+      label: "Console"
+    kerfur:
+      label: "Kerfur"
+    signals:
+      label: "Signals"
+    crafts:
+      label: "Crafts"
+    placeables:
+      label: "Placeables"
+    nsfw:
+      label: "NSFW"
   sections:
     mods:
       name: "Mods"
@@ -28,4 +50,5 @@ thunderstore:
       name: "Modpacks"
       requireCategories:
         - "modpacks"
+  wikiUrl: "https://questwalker.github.io/votv-modding-wiki/"
   discordUrl: "https://discord.gg/WKBvqu4tjV"

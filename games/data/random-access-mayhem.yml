@@ -1,0 +1,65 @@
+uuid: "64dcbac2-cc02-4338-99b4-00af4b38450b"
+label: "random-access-mayhem"
+meta:
+  displayName: "RAM: Random Access Mayhem"
+  iconUrl: "random-access-mayhem/random-access-mayhem-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "2256450"
+    steamFolderName: "RAM Random Access Mayhem"
+    dataFolderName: ""
+    exeNames:
+      - "RAM.exe"
+    packageLoader: "godotml"
+    meta:
+      displayName: "RAM: Random Access Mayhem"
+      iconUrl: "random-access-mayhem/random-access-mayhem-cover-360x480.webp"
+    settingsIdentifier: "RamRandomAccessMayhem"
+    internalFolderName: "RamRandomAccessMayhem"
+    packageIndex: "https://thunderstore.io/c/random-access-mayhem/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "夺魄机兵"
+    installRules:
+      - route: "mods"
+        defaultFileExtensions: []
+        trackingMethod: "package-zip"
+        subRoutes: []
+        isDefaultLocation: true
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "RAM: Random Access Mayhem"
+  listed: true
+  meta:
+    icon: "random-access-mayhem/random-access-mayhem-icon-192x192.webp"
+    cover: "random-access-mayhem/random-access-mayhem-cover-360x480.webp"
+    background: "random-access-mayhem/random-access-mayhem-bg-1920x1080.webp"
+    hero: "random-access-mayhem/random-access-mayhem-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/rmAGykYpxQ"
+  autolistPackageIds:
+    - "GodotModding-GodotModLoader"

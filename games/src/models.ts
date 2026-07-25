@@ -1,24 +1,49 @@
-export type ModmanTrackingMethod =
-  | "state"
-  | "subdir"
-  | "subdir-no-flatten"
-  | null;
-export type ModmanPackageLoader = "bepinex" | "melonloader" | "northstar";
+export const ModmanTrackingMethodValues = [
+  "state",
+  "subdir",
+  "subdir-no-flatten",
+  "package-zip",
+  "none",
+] as const;
+export type ModmanTrackingMethod = typeof ModmanTrackingMethodValues[number];
 
-export type DistributionPlatform =
-  | "steam"
-  | "steam-direct"
-  | "egs"
-  | "oculus"
-  | "origin"
-  | "xbox-game-pass"
-  | "other";
-export type GameType = "game" | "server";
-export type DisplayType = "visible" | "hidden";
+export const ModmanPackageLoaderValues = [
+  "bepinex",
+  "melonloader",
+  "northstar",
+  "godotml",
+  "shimloader",
+  "lovely",
+  "return-of-modding",
+  "gdweave",
+  "recursive-melonloader",
+  "bepisloader",
+  "umm",
+  "rivet",
+  "none",
+] as const;
+export type ModmanPackageLoader = typeof ModmanPackageLoaderValues[number];
+
+export const DistributionPlatformValues = [
+  "steam",
+  "steam-direct",
+  "epic-games-store",
+  "oculus-store",
+  "origin",
+  "xbox-game-pass",
+  "other",
+] as const;
+export type DistributionPlatform = typeof DistributionPlatformValues[number];
+
+export const GameTypeValues = ["game", "server"] as const;
+export type GameType = typeof GameTypeValues[number];
+
+export const DisplayTypeValues = ["visible", "hidden"] as const;
+export type DisplayType = typeof DisplayTypeValues[number];
 
 export interface GameDistributionDefinition {
   platform: DistributionPlatform;
-  identifier?: string;
+  identifier: string | null;
 }
 
 export interface ModmanModLoaderPackage {
@@ -29,28 +54,39 @@ export interface ModmanModLoaderPackage {
 export interface ModmanInstallRule {
   route: string;
   trackingMethod: ModmanTrackingMethod;
-  children?: ModmanInstallRule[];
+  subRoutes?: ModmanInstallRule[];
   defaultFileExtensions?: string[];
-  isDefaultLocation?: boolean;
+  isDefaultLocation: boolean;
 }
 
 export interface GameModmanDefinition {
+  meta: GameDefinitionMeta;
   internalFolderName: string;
   dataFolderName: string;
+  distributions?: GameDistributionDefinition[];
   settingsIdentifier: string;
   packageIndex: string;
-  exclusionsUrl: string;
   steamFolderName: string;
   exeNames: string[];
-  gameInstancetype: "game" | "server";
-  gameSelectionDisplayMode: "visible" | "hidden";
-  modLoaderPackages: ModmanModLoaderPackage[];
+  gameInstanceType: GameType;
+  gameSelectionDisplayMode: DisplayType;
+  additionalSearchStrings: string[];
+  packageLoader: ModmanPackageLoader;
   installRules: ModmanInstallRule[];
-  relativeFileExclusions?: string[];
+  relativeFileExclusions: string[] | null;
+}
+
+export interface ThunderstoreCommunityMeta {
+  icon?: string;
+  cover?: string;
+  background?: string;
+  hero?: string;
 }
 
 export interface ThunderstoreCommunityDefinition {
   displayName: string;
+  listed?: boolean;
+  meta?: ThunderstoreCommunityMeta;
   categories?: { [key: string]: { label: string } };
   sections?: {
     [key: string]: {
@@ -61,16 +97,25 @@ export interface ThunderstoreCommunityDefinition {
   };
   discordUrl?: string;
   wikiUrl?: string;
+  autolistPackageIds?: string[];
+  shortDescription?: string;
 }
+
+type GameDefinitionMeta = {
+  displayName: string;
+  iconUrl?: string | null;
+};
 
 export interface GameDefinition {
   uuid: string;
   label: string;
-  meta: {
-    displayName: string;
-    iconUrl: string;
-  };
+  meta: GameDefinitionMeta;
   distributions?: GameDistributionDefinition[];
-  r2modman?: GameModmanDefinition;
+  r2modman?: GameModmanDefinition[] | null;
   thunderstore?: ThunderstoreCommunityDefinition;
+}
+
+export interface PackageInstallerDefinition {
+  name: string;
+  description: string;
 }

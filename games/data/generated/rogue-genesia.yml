@@ -2,39 +2,56 @@ uuid: "02371030-eb56-4d5d-bed5-fa68446ff6ac"
 label: "rogue-genesia"
 meta:
   displayName: "Rogue : Genesia"
-  iconUrl: "RogueGenesia.jpg"
+  iconUrl: "rogue-genesia/rogue-genesia-cover-360x480.webp"
 distributions:
   - platform: "steam"
     identifier: "2067920"
 r2modman:
-  internalFolderName: "RogueGenesia"
-  dataFolderName: "Rogue Genesia_Data"
-  settingsIdentifier: "RogueGenesia"
-  packageIndex: "https://thunderstore.io/c/rogue-genesia/api/v1/package/"
-  exclusionsUrl: "https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md"
-  steamFolderName: "Rogue Genesia"
-  exeNames:
-    - "Rogue Genesia.exe"
-  gameInstancetype: "game"
-  gameSelectionDisplayMode: "visible"
-  modLoaderPackages:
-    - packageId: "BepInEx-BepInExPack_RogueGenesia"
-      rootFolder: "BepInExPack_RogueGenesia"
-      loader: "bepinex"
-  installRules:
-    - route: "BepInEx/plugins"
-      trackingMethod: "subdir"
-      defaultFileExtensions:
-        - ".dll"
-      isDefaultLocation: true
-    - route: "BepInEx/core"
-      trackingMethod: "subdir"
-    - route: "BepInEx/patchers"
-      trackingMethod: "subdir"
-    - route: "BepInEx/monomod"
-      trackingMethod: "subdir"
-      defaultFileExtensions:
-        - ".mm.dll"
-    - route: "BepInEx/config"
-      trackingMethod: null
-  relativeFileExclusions: []
+  - meta:
+      displayName: "Rogue : Genesia"
+      iconUrl: "rogue-genesia/rogue-genesia-cover-360x480.webp"
+    internalFolderName: "RogueGenesia"
+    dataFolderName: "Rogue Genesia_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "2067920"
+    settingsIdentifier: "RogueGenesia"
+    packageIndex: "https://thunderstore.io/c/rogue-genesia/api/v1/package-listing-index/"
+    steamFolderName: "Rogue Genesia"
+    exeNames:
+      - "Rogue Genesia.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "rg"
+      - "罗格：救世传说"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null

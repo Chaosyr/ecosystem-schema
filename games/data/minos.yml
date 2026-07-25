@@ -1,0 +1,80 @@
+uuid: "f96148a5-903f-4d0b-8bb4-42b6e9d0c3ee"
+label: "minos"
+meta:
+  displayName: "MINOS"
+  iconUrl: "minos/minos-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "3181650"
+    steamFolderName: "Minos"
+    dataFolderName: "Minos"
+    exeNames:
+      - "Minos.exe"
+    packageLoader: "shimloader"
+    meta:
+      displayName: "MINOS"
+      iconUrl: "minos/minos-cover-360x480.webp"
+    settingsIdentifier: "Minos"
+    internalFolderName: "Minos"
+    packageIndex: "https://thunderstore.io/c/minos/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "牛头人迷阵"
+    installRules:
+      - route: "shimloader/mod"
+        isDefaultLocation: true
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/pak"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/cfg"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+      - route: "shimloader/overlay"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "MINOS"
+  listed: true
+  meta:
+    icon: "minos/minos-icon-192x192.webp"
+    cover: "minos/minos-cover-360x480.webp"
+    background: "minos/minos-bg-1920x1080.webp"
+    hero: "minos/minos-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  autolistPackageIds:
+    - "Thunderstore-unreal_shimloader"
+  shortDescription: "Minos is a maze-building roguelite where you, the fabled Minotaur, must defend your sanctuary from bloodthirsty adventurers. Design and re-design deadly labyrinths, set traps, and turn every brave fool into your next victim."

@@ -1,0 +1,30 @@
+uuid: "a78aee6c-e075-47d9-9c73-e4734ec3b22a"
+label: "gang-beasts"
+meta:
+  displayName: "Gang Beasts"
+  iconUrl: "gang-beasts/gang-beasts-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "285900"
+r2modman:
+  - meta:
+      displayName: "Gang Beasts"
+      iconUrl: "gang-beasts/gang-beasts-cover-360x480.webp"
+    internalFolderName: "GangBeasts"
+    dataFolderName: "Gang Beasts_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "285900"
+    settingsIdentifier: "GangBeasts"
+    packageIndex: "https://thunderstore.io/c/gang-beasts/api/v1/package-listing-index/"
+    steamFolderName: "Gang Beasts"
+    exeNames:
+      - "Gang Beasts.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "gb"
+      - "萌萌小人大乱斗"
+    packageLoader: "recursive-melonloader"
+    installRules: []
+    relativeFileExclusions: null

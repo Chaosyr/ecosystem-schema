@@ -1,0 +1,86 @@
+uuid: "24c83122-c208-4384-906f-fd99b3194a65"
+label: "return-from-core"
+meta:
+  displayName: "Return From Core"
+  iconUrl: "return-from-core/return-from-core-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "2171630"
+    steamFolderName: "Return From Core/Return From Core"
+    dataFolderName: "Return From Core_Data"
+    exeNames:
+      - "Return From Core.exe"
+    packageLoader: "bepinex"
+    meta:
+      displayName: "Return From Core"
+      iconUrl: "return-from-core/return-from-core-cover-360x480.webp"
+    settingsIdentifier: "ReturnFromCore"
+    internalFolderName: "ReturnFromCore"
+    packageIndex: "https://thunderstore.io/c/return-from-core/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "地心归途"
+    installRules:
+      - route: "BepInEx/plugins"
+        isDefaultLocation: true
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/core"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/patchers"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/monomod"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/config"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Return From Core"
+  listed: true
+  meta:
+    icon: "return-from-core/return-from-core-icon-192x192.webp"
+    cover: "return-from-core/return-from-core-cover-360x480.webp"
+    background: "return-from-core/return-from-core-bg-1920x1080.webp"
+    hero: "return-from-core/return-from-core-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack"

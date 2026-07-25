@@ -1,0 +1,40 @@
+uuid: "be17d062-1f3d-4a6c-b147-33386590c648"
+label: "old-market-simulator"
+meta:
+  displayName: "Old Market Simulator"
+  iconUrl: "old-market-simulator/old-market-simulator-cover-360x480.webp"
+distributions: []
+thunderstore:
+  displayName: "Old Market Simulator"
+  listed: true
+  meta:
+    icon: "old-market-simulator/old-market-simulator-icon-192x192.webp"
+    cover: "old-market-simulator/old-market-simulator-cover-360x480.webp"
+    background: "old-market-simulator/old-market-simulator-bg-1920x1080.webp"
+    hero: "old-market-simulator/old-market-simulator-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  wikiUrl: "https://old-market-simulator.fandom.com/wiki/Old_Market_Simulator_Wiki"
+  discordUrl: "https://discord.com/invite/vuceeVs9e9"
+  autolistPackageIds:
+    - "BepInEx-BepInExPack"

@@ -1,0 +1,29 @@
+uuid: "ce8b8855-5fa1-46a1-a362-356254d1fff7"
+label: "painting-vr"
+meta:
+  displayName: "Painting VR"
+  iconUrl: "painting-vr/painting-vr-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "1905940"
+r2modman:
+  - meta:
+      displayName: "Painting VR"
+      iconUrl: "painting-vr/painting-vr-cover-360x480.webp"
+    internalFolderName: "PaintingVr"
+    dataFolderName: "PaintingVr_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "1905940"
+    settingsIdentifier: "PaintingVr"
+    packageIndex: "https://thunderstore.io/c/painting-vr/api/v1/package-listing-index/"
+    steamFolderName: "Painting VR"
+    exeNames:
+      - "PaintingVr.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "pvr"
+    packageLoader: "recursive-melonloader"
+    installRules: []
+    relativeFileExclusions: null

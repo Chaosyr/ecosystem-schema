@@ -1,0 +1,94 @@
+uuid: "ec590bff-7655-4946-acf1-476782de86d5"
+label: "five-nights-at-freddys-into-the-pit"
+meta:
+  displayName: "Five Nights at Freddy's: Into the Pit"
+  iconUrl: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "2638370"
+  - platform: "epic-games-store"
+    identifier: "a0fbc3eb950341e290ae20a7d02cc501"
+r2modman:
+  - meta:
+      displayName: "Five Nights at Freddy's: Into the Pit"
+      iconUrl: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-cover-360x480.webp"
+    internalFolderName: "FiveNightsAtFreddysIntoThePit"
+    dataFolderName: "Five Nights at Freddy's Into the Pit_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "2638370"
+      - platform: "epic-games-store"
+        identifier: "a0fbc3eb950341e290ae20a7d02cc501"
+    settingsIdentifier: "FiveNightsAtFreddysIntoThePit"
+    packageIndex: "https://thunderstore.io/c/five-nights-at-freddys-into-the-pit/api/v1/package-listing-index/"
+    steamFolderName: "Five Nights at Freddy's Into the Pit"
+    exeNames:
+      - "Five Nights at Freddy's Into the Pit.exe"
+      - "FNaFIntoThePit.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "玩具熊的五夜惊魂：陷落球池"
+      - "玩具熊的五夜后宫：陷入球池"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Five Nights at Freddy's: Into the Pit"
+  listed: true
+  meta:
+    icon: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-icon-192x192.webp"
+    cover: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-cover-360x480.webp"
+    background: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-bg-1920x1080.webp"
+    hero: "five-nights-at-freddys-into-the-pit/five-nights-at-freddys-into-the-pit-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  discordUrl: "https://discord.gg/technical-fnaf-664239645441261588"
+  autolistPackageIds: ["BepInEx-BepInExPack"]

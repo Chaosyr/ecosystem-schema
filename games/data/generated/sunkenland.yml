@@ -1,0 +1,56 @@
+uuid: "da78ae80-b42f-4956-b239-bfa408594ebc"
+label: "sunkenland"
+meta:
+  displayName: "Sunkenland"
+  iconUrl: "sunkenland/sunkenland-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "2080690"
+r2modman:
+  - meta:
+      displayName: "Sunkenland"
+      iconUrl: "sunkenland/sunkenland-cover-360x480.webp"
+    internalFolderName: "Sunkenland"
+    dataFolderName: "Sunkenland_Data"
+    distributions:
+      - platform: "steam"
+        identifier: "2080690"
+    settingsIdentifier: "Sunkenland"
+    packageIndex: "https://thunderstore.io/c/sunkenland/api/v1/package-listing-index/"
+    steamFolderName: "Sunkenland"
+    exeNames:
+      - "Sunkenland.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "沉没之地"
+    packageLoader: "bepinex"
+    installRules:
+      - route: "BepInEx/plugins"
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: true
+      - route: "BepInEx/core"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/patchers"
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/monomod"
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+        isDefaultLocation: false
+      - route: "BepInEx/config"
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+        isDefaultLocation: false
+    relativeFileExclusions: null

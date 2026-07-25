@@ -1,0 +1,81 @@
+uuid: "43c1b6fb-f9a5-4d25-847f-c3eda4f2bf5a"
+label: "astroneer"
+meta:
+  displayName: "Astroneer"
+  iconUrl: "astroneer/astroneer-cover-360x480.webp"
+distributions:
+  - platform: "steam"
+    identifier: "361420"
+r2modman:
+  - meta:
+      displayName: "Astroneer"
+      iconUrl: "astroneer/astroneer-cover-360x480.webp"
+    internalFolderName: "Astroneer"
+    dataFolderName: "Astro"
+    distributions:
+      - platform: "steam"
+        identifier: "361420"
+    settingsIdentifier: "Astroneer"
+    packageIndex: "https://thunderstore.io/c/astroneer/api/v1/package-listing-index/"
+    steamFolderName: "ASTRONEER"
+    exeNames:
+      - "Astro.exe"
+    gameInstanceType: "game"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "异星探险家"
+      - "异星旅人"
+    packageLoader: "shimloader"
+    installRules:
+      - route: "shimloader/mod"
+        isDefaultLocation: true
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/pak"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".pak"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "shimloader/cfg"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+      - route: "shimloader/overlay"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Astroneer"
+  listed: true
+  meta:
+    icon: "astroneer/astroneer-icon-192x192.webp"
+    cover: "astroneer/astroneer-cover-360x480.webp"
+    background: "astroneer/astroneer-bg-1920x1080.webp"
+    hero: "astroneer/astroneer-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    clientside:
+      label: "Client-side"
+    serverside:
+      label: "Server-side"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  wikiUrl: "https://astroneermodding.readthedocs.io/en/latest/"
+  discordUrl: "https://discord.gg/astroneer-modding-774729322674126858"
+  autolistPackageIds:
+    - "Thunderstore-unreal_shimloader"

@@ -1,0 +1,61 @@
+uuid: "940cd817-fa5b-464e-88a3-0de6d04388c0"
+label: "vellum"
+meta:
+  displayName: "Vellum"
+  iconUrl: "vellum/vellum-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "917950"
+    steamFolderName: "Vellum"
+    dataFolderName: "Vellum_Data"
+    exeNames:
+      - "Vellum.exe"
+    packageLoader: "recursive-melonloader"
+    meta:
+      displayName: "Vellum"
+      iconUrl: "vellum/vellum-cover-360x480.webp"
+    settingsIdentifier: "Vellum"
+    internalFolderName: "Vellum"
+    packageIndex: "https://thunderstore.io/c/vellum/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "维勒姆"
+    installRules: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Vellum"
+  listed: true
+  meta:
+    icon: "vellum/vellum-icon-192x192.webp"
+    cover: "vellum/vellum-cover-360x480.webp"
+    background: "vellum/vellum-bg-1920x1080.webp"
+    hero: "vellum/vellum-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  wikiUrl: "https://vellum.fandom.com/wiki/Vellum_Wiki"
+  discordUrl: "https://discord.gg/vellum"
+  autolistPackageIds:
+    - "LavaGang-MelonLoader"

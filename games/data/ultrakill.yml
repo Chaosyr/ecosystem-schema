@@ -2,44 +2,17 @@ uuid: "ca3b2a52-0598-4611-9906-bba3934e27f6"
 label: "ultrakill"
 meta:
   displayName: "ULTRAKILL"
-  iconUrl: null
+  iconUrl: "ultrakill/ultrakill-cover-360x480.webp"
 distributions:
   - platform: "steam"
     identifier: "1229490"
-r2modman:
-  internalFolderName: "Ultrakill"
-  dataFolderName: "ULTRAKILL_Data"
-  settingsIdentifier: "ultrakill"
-  packageIndex: "https://thunderstore.io/c/ultrakill/api/v1/package/"
-  exclusionsUrl: "https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md"
-  steamFolderName: "ULTRAKILL"
-  exeNames:
-    - "ULTRAKILL.exe"
-  gameInstancetype: "game"
-  gameSelectionDisplayMode: "visible"
-  modLoaderPackages:
-    - packageId: "BepInEx-BepInExPack_Ultrakill"
-      rootFolder: "BepInExPack_Ultrakill"
-      loader: "bepinex"
-  installRules:
-    - route: "BepInEx/plugins"
-      trackingMethod: "subdir"
-      defaultFileExtensions:
-        - ".dll"
-      isDefaultLocation: true
-    - route: "BepInEx/core"
-      trackingMethod: "subdir"
-    - route: "BepInEx/patchers"
-      trackingMethod: "subdir"
-    - route: "BepInEx/monomod"
-      trackingMethod: "subdir"
-      defaultFileExtensions:
-        - ".mm.dll"
-    - route: "BepInEx/config"
-      trackingMethod: null
-  relativeFileExclusions: []
 thunderstore:
   displayName: "ULTRAKILL"
+  listed: true
+  meta:
+    icon: "ultrakill/ultrakill-icon-192x192.webp"
+    cover: "ultrakill/ultrakill-cover-360x480.webp"
+    hero: "ultrakill/ultrakill-bg-1920x620.webp"
   categories:
     mods:
       label: "Mods"
@@ -55,10 +28,27 @@ thunderstore:
       label: "Libraries"
     misc:
       label: "Misc"
+    cosmetics:
+      label: "Cosmetics"
+    soundpacks:
+      label: "Sound Packs"
+    qol:
+      label: "Quality Of Life"
+    gameplay:
+      label: "Gameplay"
+    utility:
+      label: "Utility"
+    skins:
+      label: "Skins"
+    ai-generated:
+      label: "AI Generated"
   sections:
     mods:
       name: "Mods"
-      excludeCategories: ["modpacks"]
+      excludeCategories: ["modpacks","soundpacks"]
+    soundpacks:
+      name: "Sound Packs"
+      requireCategories: ["soundpacks"]
     modpacks:
       name: "Modpacks"
       requireCategories: ["modpacks"]

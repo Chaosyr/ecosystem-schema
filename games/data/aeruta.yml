@@ -1,0 +1,85 @@
+uuid: "70e4bc07-8642-44f1-a0a5-575eac59bd60"
+label: "aeruta"
+meta:
+  displayName: "Aeruta"
+  iconUrl: "aeruta/aeruta-cover-360x480.webp"
+distributions: []
+r2modman:
+  - gameInstanceType: "game"
+    distributions:
+      - platform: "steam"
+        identifier: "2286780"
+    steamFolderName: "Aeruta"
+    dataFolderName: "Aeruta_Data"
+    exeNames:
+      - "Aeruta.exe"
+    packageLoader: "bepinex"
+    meta:
+      displayName: "Aeruta"
+      iconUrl: "aeruta/aeruta-cover-360x480.webp"
+    settingsIdentifier: "Aeruta"
+    internalFolderName: "Aeruta"
+    packageIndex: "https://thunderstore.io/c/aeruta/api/v1/package-listing-index/"
+    gameSelectionDisplayMode: "visible"
+    additionalSearchStrings:
+      - "亚路塔：狐狸狐途的面包冒险"
+    installRules:
+      - route: "BepInEx/plugins"
+        isDefaultLocation: true
+        defaultFileExtensions:
+          - ".dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/core"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/patchers"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/monomod"
+        isDefaultLocation: false
+        defaultFileExtensions:
+          - ".mm.dll"
+        trackingMethod: "subdir"
+        subRoutes: []
+      - route: "BepInEx/config"
+        isDefaultLocation: false
+        defaultFileExtensions: []
+        trackingMethod: "none"
+        subRoutes: []
+    relativeFileExclusions: null
+thunderstore:
+  displayName: "Aeruta"
+  listed: true
+  meta:
+    icon: "aeruta/aeruta-icon-192x192.webp"
+    cover: "aeruta/aeruta-cover-360x480.webp"
+    background: "aeruta/aeruta-bg-1920x1080.webp"
+    hero: "aeruta/aeruta-bg-1920x620.webp"
+  categories:
+    mods:
+      label: "Mods"
+    modpacks:
+      label: "Modpacks"
+    tools:
+      label: "Tools"
+    libraries:
+      label: "Libraries"
+    misc:
+      label: "Misc"
+    audio:
+      label: "Audio"
+  sections:
+    mods:
+      name: "Mods"
+      excludeCategories:
+        - "modpacks"
+    modpacks:
+      name: "Modpacks"
+      requireCategories:
+        - "modpacks"
+  autolistPackageIds: []
