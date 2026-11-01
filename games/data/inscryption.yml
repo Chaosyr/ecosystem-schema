@@ -61,7 +61,7 @@ thunderstore:
     libraries:
       label: "Libraries"
     tools:
-      label: "Tools"
+      label: "Developer Tools"
     tweaks:
       label: "Tweaks"
     misc:
