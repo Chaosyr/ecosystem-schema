@@ -72,7 +72,7 @@ thunderstore:
       label: "AI Generated Content"
   sections:
     mods:
-      name: "All Mods"
+      name: "Mods"
       excludeCategories:
         - "modpacks"
         - "tools"
