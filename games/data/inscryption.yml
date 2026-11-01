@@ -78,7 +78,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     act-i:
-      name: "Act I"
+      name: "Act I Mods"
       requireCategories:
         - "act-i"
       excludeCategories:
@@ -86,7 +86,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     act-ii:
-      name: "Act II"
+      name: "Act II Mods"
       requireCategories:
         - "act-ii"
       excludeCategories:
@@ -94,7 +94,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     act-iii:
-      name: "Act III"
+      name: "Act III Mods"
       requireCategories:
         - "act-iii"
       excludeCategories:
@@ -102,7 +102,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     kaycees-mod:
-      name: "Kaycee's Mod"
+      name: "Kaycee's Mod Addons"
       requireCategories:
         - "kaycees-mod"
       excludeCategories:
@@ -110,7 +110,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     magmod-addons:
-      name: "Magnificus Mod"
+      name: "Magnificus Mod Addons"
       requireCategories:
         - "magmod-addons"
       excludeCategories:
@@ -118,7 +118,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     grimoramod-addons:
-      name: "Grimora Mod"
+      name: "Grimora Mod Addons"
       requireCategories:
         - "grimoramod-addons"
       excludeCategories:
@@ -126,7 +126,7 @@ thunderstore:
         - "tools"
         - "ai-generated"
     p03-kcm-addons:
-      name: "P03 In Kaycee's Mod"
+      name: "P03 In Kaycee's Mod Addons"
       requireCategories:
         - "p03-kcm-addons"
       excludeCategories:
