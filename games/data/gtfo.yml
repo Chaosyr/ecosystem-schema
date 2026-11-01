@@ -20,7 +20,7 @@ thunderstore:
     rundown-mods:
       label: "Rundown Mods"
     dev-tools:
-      label: "Dev Tools"
+      label: "Developer Tools"
     modpacks:
       label: "Modpacks"
     libraries:
@@ -28,7 +28,26 @@ thunderstore:
     ai-generated:
       label: "AI Generated"
     geomorph-packs:
-      label: "Geomorph Packs"
-  sections: {}
+      label: "Asset Packs"
+  sections: 
+      mods:
+        name: "Mods"
+        excludeCategories:
+          - "modpacks"
+          - "dev-tools"
+      developer-tools:
+        name: "Developer Tools"
+        requireCategories:
+          - "dev-tools"
+          - "libraries"
+        excludeCategories:
+          - "modpacks"
+      modpacks:
+        name: "Modpacks"
+        requireCategories:
+          - "modpacks"
+        excludeCategories:
+          - "dev-tools"
   discordUrl: "https://discord.com/invite/rRMPtv4FAh"
+  wikiUrl: "https://gtfo-modding.gitbook.io/wiki"
   shortDescription: "GTFO is a hardcore cooperative horror shooter that throws you from gripping suspense to explosive action in a heartbeat. Stealth, strategy, and teamwork are necessary to survive in your deadly, underground prison. Work together or die together."
