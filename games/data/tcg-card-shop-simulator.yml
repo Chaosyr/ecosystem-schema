@@ -60,7 +60,7 @@ thunderstore:
         modpacks:
           label: "Modpacks"
         tools:
-          label: "Tools"
+          label: "Developer Tools"
         libraries:
           label: "Libraries"
         misc:
