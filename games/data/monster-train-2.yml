@@ -50,7 +50,7 @@ thunderstore:
     balance:
       label: "Balance"
     ai-generated:
-      label: "Ai Generated"
+      label: "AI Generated"
   sections:
     mods:
       name: "Mods"
@@ -61,6 +61,6 @@ thunderstore:
       requireCategories:
         - "modpacks"
   wikiUrl: "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/wiki"
-  discordUrl: "https://discord.com/channels/336546996779483136/1377778943674810368"
+  discordUrl: "https://discord.gg/6qBCCMU8vP"
   autolistPackageIds:
     - "BepInEx-BepInExPack"
