@@ -46,7 +46,7 @@ thunderstore:
     mods:
       name: "Mods"
       excludeCategories:
-        - "modpacks"
+        - "modpack"
     modpacks:
       name: "Modpacks"
       requireCategories:
