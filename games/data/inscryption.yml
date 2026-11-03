@@ -143,17 +143,22 @@ thunderstore:
     developer-tools:
       name: "Developer Tools"
       requireCategories:
-        - "tools"
-        - "libraries"
+        - category: "tools"
+          concatenation-mode: false
+        - category: "libraries"
+          concatenation-mode: false
       excludeCategories:
         - "modpacks"
         - "ai-generated"
     ai-gen-developer-tools:
       name: "AI Generated Developer Tools"
       requireCategories:
-        - "tools"
-        - "libraries"
-        - "ai-generated"
+        - category: "tools"
+          concatenation-mode: false
+        - category: "libraries"
+          concatenation-mode: false
+        - category: "ai-generated"
+          concatenation-mode: true
       excludeCategories:
         - "modpacks"
     modpacks:
