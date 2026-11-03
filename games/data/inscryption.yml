@@ -15,19 +15,19 @@ thunderstore:
     hero: "inscryption/inscryption-bg-1920x620.webp"
   categories:
     act-i:
-      label: "Act I"
+      label: "Act I Compatible"
     act-ii:
-      label: "Act II"
+      label: "Act II Compatible"
     act-iii:
-      label: "Act III"
+      label: "Act III Compatible"
     kaycees-mod:
-      label: "Kaycee's Mod"
+      label: "Kaycee's Mod Compatible"
     magmod-addons:
-      label: "Magnificus Mod"
+      label: "Magnificus Mod Compatible"
     grimoramod-addons:
-      label: "Grimora Mod"
+      label: "Grimora Mod Compatible"
     p03-kcm-addons:
-      label: "P03 In Kaycee's Mod"
+      label: "P03 In Kaycee's Mod Compatible"
     cards:
       label: "Cards"
     sigils:
