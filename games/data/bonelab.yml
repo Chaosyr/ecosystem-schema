@@ -53,6 +53,6 @@ thunderstore:
     modpacks:
       name: "Modpacks"
       requireCategories:
-        - "modpack"
+        - "modpacks"
   discordUrl: "https://discord.gg/BONELAB"
   shortDescription: "BONELAB is an experimental physics action game. Explore a mysterious lab filled with weapons, enemies, challenges and secrets. Escape your reality, or wreak havoc. No wrong answers."
