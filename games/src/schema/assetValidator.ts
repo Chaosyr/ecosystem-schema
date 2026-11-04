@@ -5,17 +5,19 @@ const ASSETS_ROOT = "./assets";
 const ALLOWLIST_PATH = `${ASSETS_ROOT}/.legacy-allowlist`;
 
 type Variant = {
-  type: "icon" | "cover" | "bg";
+  type: "icon" | "cover" | "bg" | "bg-hero";
   width: number;
   height: number;
   required: boolean;
 };
 
+// For now expect bg or bg-hero for 1920x620
 const VARIANTS: Variant[] = [
   { type: "icon", width: 192, height: 192, required: true },
   { type: "cover", width: 360, height: 480, required: true },
   { type: "bg", width: 1920, height: 1080, required: true },
-  { type: "bg", width: 1920, height: 620, required: true },
+  { type: "bg", width: 1920, height: 620, required: false },
+  { type: "bg-hero", width: 1920, height: 620, required: false },
   { type: "bg", width: 1080, height: 492, required: false },
   { type: "bg", width: 400, height: 534, required: false },
 ];
