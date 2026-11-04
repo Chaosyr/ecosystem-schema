@@ -13,7 +13,7 @@ const slug = z.string().regex(new RegExp(/^[a-z0-9](-?[a-z0-9])*$/));
 
 const communityAsset = z
   .string()
-  .regex(new RegExp(/^([a-z0-9](?:-?[a-z0-9])*)\/\1-(bg|cover|icon)-\d+x\d+\.webp$/));
+  .regex(new RegExp(/^([a-z0-9](?:-?[a-z0-9])*)\/\1-(bg-hero|bg|cover|icon)-\d+x\d+\.webp$/));
 
 const communityMetaSchema = z.strictObject({
   icon: communityAsset.optional(),
