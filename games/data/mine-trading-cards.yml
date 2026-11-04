@@ -1,12 +1,12 @@
 uuid: "ca0083e0-697f-4825-b0fc-fbb3eff34dd3"
 label: "mine-trading-cards"
 meta:
-  displayName: "mine-trading-cards"
+  displayName: "Mine Trading Cards"
   iconUrl: "mine-trading-cards/mine-trading-cards-cover-360x480.webp"
 distributions: []
 r2modman: null
 thunderstore:
-  displayName: "mine-trading-cards"
+  displayName: "Mine Trading Cards"
   shortDescription: "Mine Trading Cards is a Content Loader (primarily for Minecraft) which allows you to add Trading Card Game related content to your games. This ecosystem contains MTC Packs for the Loader."
   listed: true
   meta:
