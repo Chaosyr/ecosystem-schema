@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ALL_FILENAME_TYPES as communityAssetTypes } from "./assetValidator.js";
 
 import { isAutolistPackageValid } from "./autolistPackages.js";
 import {
@@ -13,7 +14,7 @@ const slug = z.string().regex(new RegExp(/^[a-z0-9](-?[a-z0-9])*$/));
 
 const communityAsset = z
   .string()
-  .regex(new RegExp(/^([a-z0-9](?:-?[a-z0-9])*)\/\1-(bg-hero|bg|cover|icon)-\d+x\d+\.webp$/));
+  .regex(new RegExp(`^([a-z0-9](?:-?[a-z0-9])*)\\/\\1-(${communityAssetTypes.join("|")})-\\d+x\\d+\\.webp$`));
 
 const communityMetaSchema = z.strictObject({
   icon: communityAsset.optional(),
