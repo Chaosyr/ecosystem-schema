@@ -25,7 +25,7 @@ const VARIANTS: Variant[] = [
 const LEGACY_REQUIRED_VARIANT = "cover-360x480.webp";
 
 const FILENAME_PATTERN =
-  /^([a-z0-9](?:-?[a-z0-9])*)-(icon|cover|bg)-(\d+)x(\d+)\.webp$/;
+  /^([a-z0-9](?:-?[a-z0-9])*)-(icon|cover|bg|bg-hero)-(\d+)x(\d+)\.webp$/;
 
 function loadAllowlist(): Set<string> {
   if (!fs.existsSync(ALLOWLIST_PATH)) return new Set();
