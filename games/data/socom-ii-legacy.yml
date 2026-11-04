@@ -13,7 +13,7 @@ thunderstore:
     icon: "socom-ii-legacy/socom-ii-legacy-icon-192x192.webp"
     cover: "socom-ii-legacy/socom-ii-legacy-cover-360x480.webp"
     background: "socom-ii-legacy/socom-ii-legacy-bg-1920x1080.webp"
-    hero: "socom-ii-legacy/socom-ii-legacy-bg-1920x620.webp"
+    hero: "socom-ii-legacy/socom-ii-legacy-bg-hero-1920x620.webp"
   categories:
     maps:
       label: "Maps"
