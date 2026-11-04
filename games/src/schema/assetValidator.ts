@@ -26,7 +26,7 @@ const LEGACY_REQUIRED_VARIANT = "cover-360x480.webp";
 export const ALL_FILENAME_TYPES = Array.from(new Set(VARIANTS.flatMap((v) => [v.type, ...(v.alternates ?? [])])));
 
 const FILENAME_PATTERN =
-  `^([a-z0-9](?:-?[a-z0-9])*)-(${ALL_FILENAME_TYPES.join("|")})-(\d+)x(\d+)\.webp$`;
+  `^([a-z0-9](?:-?[a-z0-9])*)-(${ALL_FILENAME_TYPES.join("|")})-(\\d+)x(\\d+)\\.webp$`;
 
 function loadAllowlist(): Set<string> {
   if (!fs.existsSync(ALLOWLIST_PATH)) return new Set();
