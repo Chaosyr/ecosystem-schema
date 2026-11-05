@@ -86,6 +86,10 @@ thunderstore:
       label: "Units"
     factions:
       label: "Factions"
+    tweaks:
+      label: "Tweaks"
+    utils:
+      label: "Utilities"
     maps:
       label: "Maps"
     ai-generated:
