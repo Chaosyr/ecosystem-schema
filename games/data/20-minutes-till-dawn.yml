@@ -3,11 +3,7 @@ label: "20-minutes-till-dawn"
 meta:
   displayName: "20 Minutes Till Dawn"
   iconUrl: "20-minutes-till-dawn/20-minutes-till-dawn-cover-360x480.webp"
-distributions:
-  - platform: "steam"
-    identifier: "1966900"
-  - platform: "epic-games-store"
-    identifier: "4656facc740742a39e265b026e13d075"
+distributions: []
 thunderstore:
   displayName: "20 Minutes Till Dawn"
   listed: true
