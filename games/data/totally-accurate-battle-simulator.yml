@@ -89,7 +89,7 @@ thunderstore:
     tweaks:
       label: "Tweaks"
     utils:
-      label: "Utilities"
+      label: "Utils"
     maps:
       label: "Maps"
     ai-generated:
