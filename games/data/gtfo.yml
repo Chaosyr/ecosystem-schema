@@ -13,12 +13,12 @@ thunderstore:
     background: "gtfo/gtfo-bg-1920x1080.webp"
     hero: "gtfo/gtfo-bg-1920x620.webp"
   categories:
-    rundowns:
+    rundowns:  
       label: "Rundowns"
     client-mods:
       label: "Client Mods"
     rundown-mods:
-      label: "Rundown Mods"
+      label: "Rundown Tools"
     dev-tools:
       label: "Developer Tools"
     modpacks:
@@ -28,26 +28,48 @@ thunderstore:
     ai-generated:
       label: "AI Generated"
     geomorph-packs:
-      label: "Asset Packs"
+      label: "Asset Packs"    
+    datablocks:
+      label: "DataBlocks (MTFO)"   
+    rebalance:
+      label: "Rebalance"
+    quality-of-life:
+      label: "Quality of Life"
+    bug-fixes:
+      label: "Bug Fixes"
   sections: 
+      mods-exc-ai:
+        name: "Mods (Excluding AI)"
+        excludeCategories:
+          - "ai-generated"
+          - "modpacks"
+          - "dev-tools"
       mods:
         name: "Mods"
         excludeCategories:
           - "modpacks"
           - "dev-tools"
-      developer-tools:
-        name: "Developer Tools"
+      rundowns:
+        name: "Rundowns"
         requireCategories:
-          - "dev-tools"
-          - "libraries"
+          - "rundowns"
+          - "rebalance"
         excludeCategories:
-          - "modpacks"
+          - "client-mods"
       modpacks:
         name: "Modpacks"
         requireCategories:
           - "modpacks"
         excludeCategories:
           - "dev-tools"
+      developer-tools:
+        name: "Developer Tools"
+        requireCategories:
+          - "dev-tools"
+          - "libraries"
+          - "rundown-mods"
+        excludeCategories:
+          - "modpacks"
   discordUrl: "https://discord.com/invite/rRMPtv4FAh"
   wikiUrl: "https://gtfo-modding.gitbook.io/wiki"
   shortDescription: "GTFO is a hardcore cooperative horror shooter that throws you from gripping suspense to explosive action in a heartbeat. Stealth, strategy, and teamwork are necessary to survive in your deadly, underground prison. Work together or die together."
