@@ -5,28 +5,25 @@ const ASSETS_ROOT = "./assets";
 const ALLOWLIST_PATH = `${ASSETS_ROOT}/.legacy-allowlist`;
 
 type Variant = {
-  type: "icon" | "cover" | "bg" | "bg-hero";
+  type: "icon" | "cover" | "bg";
   width: number;
   height: number;
   required: boolean;
-  alternates: string[]
 };
 
 const VARIANTS: Variant[] = [
-  { type: "icon", width: 192, height: 192, required: true, alternates: [] },
-  { type: "cover", width: 360, height: 480, required: true, alternates: [] },
-  { type: "bg", width: 1920, height: 1080, required: true, alternates: [] },
-  { type: "bg", width: 1920, height: 620, required: true, alternates: ["bg-hero"] },
-  { type: "bg", width: 1080, height: 492, required: false, alternates: [] },
-  { type: "bg", width: 400, height: 534, required: false, alternates: [] },
+  { type: "icon", width: 192, height: 192, required: true },
+  { type: "cover", width: 360, height: 480, required: true },
+  { type: "bg", width: 1920, height: 1080, required: true },
+  { type: "bg", width: 1920, height: 620, required: true },
+  { type: "bg", width: 1080, height: 492, required: false },
+  { type: "bg", width: 400, height: 534, required: false },
 ];
 
 const LEGACY_REQUIRED_VARIANT = "cover-360x480.webp";
 
-export const ALL_FILENAME_TYPES = Array.from(new Set(VARIANTS.flatMap((v) => [v.type, ...(v.alternates ?? [])])));
-
 const FILENAME_PATTERN =
-  `^([a-z0-9](?:-?[a-z0-9])*)-(${ALL_FILENAME_TYPES.join("|")})-(\\d+)x(\\d+)\\.webp$`;
+  /^([a-z0-9](?:-?[a-z0-9])*)-(icon|cover|bg)-(\d+)x(\d+)\.webp$/;
 
 function loadAllowlist(): Set<string> {
   if (!fs.existsSync(ALLOWLIST_PATH)) return new Set();
@@ -41,8 +38,8 @@ function loadAllowlist(): Set<string> {
 
 function readWebpDimensions(buf: Buffer): { width: number; height: number } {
   if (buf.length < 30) throw new Error("file too short to be webp");
-  if (buf.toString("ascii", 0, 4) !== "RIFF") throw new Error("not a RIFF file, you probably didn't convert it to a WEBP (correctly) try: https://cloudconvert.com/png-to-webp for affected files.");
-  if (buf.toString("ascii", 8, 12) !== "WEBP") throw new Error("not a WEBP file, you probably didn't convert it to a WEBP (correctly) try: https://cloudconvert.com/png-to-webp for affected files.");
+  if (buf.toString("ascii", 0, 4) !== "RIFF") throw new Error("not a RIFF file");
+  if (buf.toString("ascii", 8, 12) !== "WEBP") throw new Error("not a WEBP file");
 
   const chunk = buf.toString("ascii", 12, 16);
   if (chunk === "VP8 ") {
@@ -70,9 +67,8 @@ function readWebpDimensions(buf: Buffer): { width: number; height: number } {
   throw new Error(`unknown webp chunk '${chunk}'`);
 }
 
-function validateStrict(slug: string): [string[], string[]] {
+function validateStrict(slug: string): string[] {
   const errors: string[] = [];
-  const warnings: string[] = [];
   const dir = `${ASSETS_ROOT}/${slug}`;
   const files = fs.readdirSync(dir);
 
@@ -81,7 +77,7 @@ function validateStrict(slug: string): [string[], string[]] {
     if (!file.endsWith(".webp")) continue;
     const match = file.match(FILENAME_PATTERN);
     if (!match) {
-      warnings.push(`${slug}/${file}: unrecognized filename, we are ignoring this BUT if it's meant to appear for future make sure the file matches conventions!`);
+      errors.push(`${slug}/${file}: unrecognized filename`);
       continue;
     }
     const [, fileSlug, type, wStr, hStr] = match;
@@ -94,7 +90,7 @@ function validateStrict(slug: string): [string[], string[]] {
     const width = parseInt(wStr, 10);
     const height = parseInt(hStr, 10);
     const matchingVariant = VARIANTS.find(
-      (v) => (v.type === type || v.alternates?.includes(type)) && v.width === width && v.height === height
+      (v) => v.type === type && v.width === width && v.height === height
     );
     if (!matchingVariant) {
       errors.push(
@@ -119,18 +115,13 @@ function validateStrict(slug: string): [string[], string[]] {
 
   for (const variant of VARIANTS) {
     if (!variant.required) continue;
-    const expectedAndAlternatesFallbacks = [
-      `${slug}-${variant.type}-${variant.width}x${variant.height}.webp`,
-      ...(variant.alternates ?? []).map(
-        (alt) => `${slug}-${alt}-${variant.width}x${variant.height}.webp`
-      ),
-    ];
-    if (!expectedAndAlternatesFallbacks.some((expected) => files.includes(expected))) {
-      errors.push(`${slug}: missing required variant ${slug}-${variant.type}-${variant.width}x${variant.height}.webp`);
+    const expected = `${slug}-${variant.type}-${variant.width}x${variant.height}.webp`;
+    if (!files.includes(expected)) {
+      errors.push(`${slug}: missing required variant ${expected}`);
     }
   }
 
-  return [errors, warnings];
+  return errors;
 }
 
 function validateLegacy(slug: string): string[] {
@@ -156,7 +147,6 @@ function collectIconUrls(schema: SchemaType): { gameLabel: string; url: string }
 export function validateAssets(schema: SchemaType): void {
   const allowlist = loadAllowlist();
   const errors: string[] = [];
-  const warnings: string[] = [];
 
   const dirs = fs
     .readdirSync(ASSETS_ROOT)
@@ -166,9 +156,7 @@ export function validateAssets(schema: SchemaType): void {
     if (allowlist.has(slug)) {
       errors.push(...validateLegacy(slug));
     } else {
-      let [errorsValidation, warningsValidation] = validateStrict(slug);
-      errors.push(...errorsValidation);
-      warnings.push(...warningsValidation);
+      errors.push(...validateStrict(slug));
     }
   }
 
@@ -202,10 +190,6 @@ export function validateAssets(schema: SchemaType): void {
         );
       }
     }
-  }
-
-  if (warnings.length > 0) {
-    console.warn(`Asset validation has warnings:\n\n${warnings.join("\n")}`);
   }
 
   if (errors.length > 0) {

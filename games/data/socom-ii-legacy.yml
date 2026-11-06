@@ -3,17 +3,18 @@ label: "socom-ii-legacy"
 meta:
   displayName: "SOCOM II Legacy"
   iconUrl: "socom-ii-legacy/socom-ii-legacy-cover-360x480.webp"
-distributions: []
+distributions:
+  - platform: "other"
+    identifier: null
 r2modman: null
 thunderstore:
   displayName: "SOCOM II Legacy"
-  shortDescription: "SOCOM II: U.S. Navy SEALs rebuilt for the browser using assets from your own 💿 (disk)"
   listed: true
   meta:
     icon: "socom-ii-legacy/socom-ii-legacy-icon-192x192.webp"
     cover: "socom-ii-legacy/socom-ii-legacy-cover-360x480.webp"
     background: "socom-ii-legacy/socom-ii-legacy-bg-1920x1080.webp"
-    hero: "socom-ii-legacy/socom-ii-legacy-bg-hero-1920x620.webp"
+    hero: "socom-ii-legacy/socom-ii-legacy-bg-1920x620.webp"
   categories:
     maps:
       label: "Maps"
@@ -56,6 +57,10 @@ thunderstore:
     ai-generated:
       label: "AI Generated Content"
   sections:
+    all:
+      name: "All"
+      excludeCategories:
+        - "modpacks"
     maps:
       name: "Maps"
       requireCategories:
@@ -108,3 +113,4 @@ thunderstore:
         - "modpacks"
   wikiUrl: "https://github.com/Scotho/socom-legacy"
   discordUrl: "https://discord.gg/Rgg62asgYT"
+  shortDescription: "Bringing SOCOM II to your browser. Built by lifelong fans, staying rigidly true to the game we love."
