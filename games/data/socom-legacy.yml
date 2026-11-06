@@ -1,20 +1,20 @@
 uuid: "acc4053d-5df8-41d3-b77f-884157b0336e"
-label: "socom-ii-legacy"
+label: "socom-legacy"
 meta:
-  displayName: "SOCOM II Legacy"
-  iconUrl: "socom-ii-legacy/socom-ii-legacy-cover-360x480.webp"
+  displayName: "SOCOM Legacy"
+  iconUrl: "socom-legacy/socom-legacy-cover-360x480.webp"
 distributions:
   - platform: "other"
     identifier: null
 r2modman: null
 thunderstore:
-  displayName: "SOCOM II Legacy"
+  displayName: "SOCOM Legacy"
   listed: true
   meta:
-    icon: "socom-ii-legacy/socom-ii-legacy-icon-192x192.webp"
-    cover: "socom-ii-legacy/socom-ii-legacy-cover-360x480.webp"
-    background: "socom-ii-legacy/socom-ii-legacy-bg-1920x1080.webp"
-    hero: "socom-ii-legacy/socom-ii-legacy-bg-1920x620.webp"
+    icon: "socom-legacy/socom-legacy-icon-192x192.webp"
+    cover: "socom-legacy/socom-legacy-cover-360x480.webp"
+    background: "socom-legacy/socom-legacy-bg-1920x1080.webp"
+    hero: "socom-legacy/socom-legacy-bg-1920x620.webp"
   categories:
     maps:
       label: "Maps"
