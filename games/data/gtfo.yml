@@ -38,14 +38,14 @@ thunderstore:
     bug-fixes:
       label: "Bug Fixes"
   sections:
-    mods-exc-ai:
-      name: "Mods (Excluding AI)"
+    mods:
+      name: "Mods (excluding AI)"
       excludeCategories:
         - "ai-generated"
         - "modpacks"
         - "dev-tools"
-    mods:
-      name: "Mods"
+    mods-including-ai:
+      name: "Mods (including AI)"
       excludeCategories:
         - "modpacks"
         - "dev-tools"
